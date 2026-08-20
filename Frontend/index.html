@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Hotel Management System</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Navigation Bar -->
+    <header>
+        <div class="logo">🏨 Hotel Management</div>
+
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#rooms">Rooms</a>
+            <a href="#customers">Customers</a>
+            <a href="#bookings">Bookings</a>
+            <a href="#checkout">Check Out</a>
+        </nav>
+    </header>
+
+
+    <!-- Home Section -->
+    <section id="home" class="hero">
+
+        <div class="hero-content">
+
+            <h1>Welcome to Our Hotel</h1>
+
+            <p>
+                Manage rooms, customers and bookings easily.
+            </p>
+
+            <button onclick="showRooms()">
+                View Rooms
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- Dashboard -->
+    <section class="dashboard">
+
+        <h2>Hotel Dashboard</h2>
+
+        <div class="cards">
+
+            <div class="card">
+                <h3>🛏️ Rooms</h3>
+                <p id="roomCount">5</p>
+                <span>Total Rooms</span>
+            </div>
+
+            <div class="card">
+                <h3>👤 Customers</h3>
+                <p id="customerCount">0</p>
+                <span>Registered Customers</span>
+            </div>
+
+            <div class="card">
+                <h3>📋 Bookings</h3>
+                <p id="bookingCount">0</p>
+                <span>Total Bookings</span>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Rooms Section -->
+    <section id="rooms" class="section">
+
+        <h2>Available Rooms</h2>
+
+        <div id="roomList" class="room-container">
+
+        </div>
+
+    </section>
+
+
+    <!-- Customer Section -->
+    <section id="customers" class="section">
+
+        <h2>Customer Registration</h2>
+
+        <form id="customerForm">
+
+            <input
+                type="text"
+                id="customerName"
+                placeholder="Enter your name"
+                required
+            >
+
+            <input
+                type="tel"
+                id="customerPhone"
+                placeholder="Enter phone number"
+                required
+            >
+
+            <button type="submit">
+                Add Customer
+            </button>
+
+        </form>
+
+        <div class="customer-list">
+
+    <h3>Registered Customers</h3>
+
+    <button onclick="loadCustomers()">
+        Refresh Customers
+    </button>
+
+    <div id="customerList">
+        <p>Click "Refresh Customers" to view customers.</p>
+    </div>
+
+</div>
+
+    </section>
+
+
+    <!-- Booking Section -->
+   <section id="bookings" class="section">
+
+    <h2>Booking Information</h2>
+
+    <button onclick="loadBookings()">
+        Refresh Bookings
+    </button>
+
+    <div id="bookingMessage">
+
+        <p>
+            Click "Refresh Bookings" to view bookings.
+        </p>
+
+    </div>
+
+</section>
+
+
+   <!-- Check Out Section -->
+
+<section id="checkout" class="section">
+
+    <h2>Customer Check-Out</h2>
+
+    <form id="checkoutForm">
+
+        <input
+            type="number"
+            id="bookingId"
+            placeholder="Enter Booking ID"
+            required
+        >
+
+        <button type="submit">
+            Check Out
+        </button>
+
+    </form>
+
+</section>
+   
+    <!-- Footer -->
+    <footer>
+
+        <p>
+            © 2026 Hotel Management System
+        </p>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
